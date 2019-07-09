@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+  File:     Rotax 981.xml  engine
+  Author:   Aero-Matic v 0.8
+
+  Inputs:
+    name:           Rotax 981
+    type:           piston
+    power:          80 hp
+    augmented?      no
+    injected?       no
+-->
+
+<piston_engine name="Rotax 981">
+  <minmp unit="INHG">          6.0 </minmp>
+  <maxmp unit="INHG">         30.0 </maxmp>
+  <displacement unit="IN3"> 128.00 </displacement>
+  <maxhp>        80.00 </maxhp>
+  <cycles>         2.0 </cycles>
+  <idlerpm>      700.0 </idlerpm>
+  <maxthrottle>    1.0 </maxthrottle>
+  <minthrottle>    0.1 </minthrottle>
+</piston_engine>

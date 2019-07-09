@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Climb Check</title>
+    <item>
+        <name>Throttle</name>
+        <value>Full throttle</value>
+    </item>
+    <item>
+        <name>Flaps</name>
+        <value>Up (Slowly Return)</value>
+    </item>
+    <item>
+        <name>Engine Instruments</name>
+        <value>Monitor</value>
+    </item>
+    <item>
+        <name>Airspeeds (IAS)</name>
+        <value>75 MPH</value>
+        <value>(65 KTS, 120 KM/H) IAS</value>
+    </item>
+</PropertyList>

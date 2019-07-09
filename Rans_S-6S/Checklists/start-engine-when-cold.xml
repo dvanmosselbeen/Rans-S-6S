@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Starting Engine When Cold Check</title>
+    <item>
+        <name>Brakes</name>
+        <value>Apply</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>Set</value>
+    </item>
+    <item>
+        <name>Propeller Area</name>
+        <value>Clear</value>
+    </item>
+    <item>
+        <name>Starter</name>
+        <value>Engage</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>Adjust</value>
+    </item>
+    <item>
+        <name>Oil Pressure</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>Coolant Pressure</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>If engine does not start within 10 seconds:</name>
+        <value></value>
+    </item>
+    <item>
+        <name>Prime and repeat starting procedure</name>
+        <value></value>
+    </item>
+
+</PropertyList>

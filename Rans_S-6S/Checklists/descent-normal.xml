@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Descent Normal Check</title>
+    <item>
+        <name>Seat Belts and Harnesses</name>
+        <value>Fastened</value>
+    </item>
+    <item>
+        <name>Altimeter</name>
+        <value>Set</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>4000 RPM</value>
+    </item>
+    <item>
+        <name>Airspeed</name>
+        <value>75 MPH</value>
+        <value>(65 KTS, 120 KM/H) IAS</value>
+    </item>
+</PropertyList>

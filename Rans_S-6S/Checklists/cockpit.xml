@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Cockpit Check</title>
+    <item>
+        <name>Flight Controls</name>
+        <value>Remove restraints</value>
+    </item>
+    <item>
+        <name>Ignition Switch</name>
+        <value>Off</value>
+    </item>
+    <item>
+        <name>Primary Flight Controls</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>Flaps</name>
+        <value>Check and up</value>
+    </item>
+    <item>
+        <name>Fuel valve</name>
+        <value>On</value>
+    </item>
+    <item>
+        <name>Passenger Seat Belts and Harness</name>
+        <value>Checked</value>
+    </item>
+    <item>
+        <name>Windshield and doors</name>
+        <value>Check, Clean</value>
+    </item>
+    <item>
+        <name>Baggage</name>
+        <value>Secure</value>
+    </item>
+    <item>
+        <name>Fuel Tank</name>
+        <value>Visually check supply</value>
+    </item>
+    <item>
+        <name>Seats</name>
+        <value>Adjust as needed</value>
+    </item>
+</PropertyList>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Balked Landing Check</title>
+    <item>
+        <name>Throttle</name>
+        <value>Full Throttle</value>
+    </item>
+    <item>
+        <name>Flaps</name>
+        <value>Up</value>
+    </item>
+    <item>
+        <name>Airspeed</name>
+        <value>Until clear of obstacles: 50 MPH</value>
+        <value>(43 KTS, 80 KM/H) IAS</value>
+    </item>
+</PropertyList>

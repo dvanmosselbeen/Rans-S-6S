@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Takeoff Short Field Check</title>
+    <item>
+        <name>Wing Flaps</name>
+        <value>Down 2 notches</value>
+    </item>
+    <item>
+        <name>Brakes</name>
+        <value>Apply</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>Full Throttle</value>
+    </item>
+    <item>
+        <name>Brakes</name>
+        <value>Release</value>
+    </item>
+    <item>
+        <name>Airspeed</name>
+        <value>Accelerate to 45 MPH</value>
+        <value>(39 KTS, 72 KM/H)</value>
+    </item>
+    <item>
+        <name>Left rudder (Right rudder for Rotax 912 engine)</name>
+        <value>As Needed</value>
+    </item>
+    <item>
+        <name>Stick</name>
+        <value>Apply slight back pressure</value>
+    </item>
+    <item>
+        <name>After lift-off accelerate just above the ground to</name>
+        <value></value>
+    </item>
+    <item>
+        <name>40 MPH (35 KTS, 64 KM/H) and climb past obstacle</name>
+        <value></value>
+    </item>
+    <item>
+        <name>height. Continue climbing while accelerating to</name>
+        <value></value>
+    </item>
+    <item>
+        <name>55 MPH (48 KTS, 89 KM/H). Slowly remove flaps.</name>
+        <value></value>
+    </item>
+</PropertyList>

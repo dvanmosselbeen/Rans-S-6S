@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    
+    <path>switch_rnd.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>  0 </min-m>
+        <max-m> 45 </max-m>
+    </animation>
+
+    <animation>
+        <object-name>SwitchBase</object-name>
+        <object-name>SwitchLever</object-name>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>SwitchLever</object-name>
+        <property>controls/engines/engine[0]/master-alt</property>
+        <factor> -60 </factor>
+        <axis>
+            <x> 0 </x>
+            <y> 1 </y>
+            <z> 0 </z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <visible>true</visible>
+        <object-name>SwitchLever</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>controls/engines/engine[0]/master-alt</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/model/click</property>
+            </binding>
+            <binding>
+                <command>property-toggle</command>
+                <property>sim/sound/switch</property>
+            </binding>
+        </action>
+    </animation>
+
+</PropertyList>

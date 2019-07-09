@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="rans_s-6s-base.xml">
+
+  <sim>
+
+    <description>Rans S-6S (JSBSim)</description>
+    <flight-model archive="y">jsb</flight-model>
+    <aero archive="y">rans_s-6s-jsbsim</aero>
+
+  </sim>
+ 
+</PropertyList>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="rans_s-6s-jsbsim-cnf.xml">
+
+    <sim>
+        <description>Rans S-6S (JSBSim)</description>
+        <author>David Van Mosselbeen</author>
+    </sim>
+
+    <!--
+    <nasal>
+        <garmin196>
+            <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
+        </garmin196>
+    </nasal>
+    -->
+
+</PropertyList>
+

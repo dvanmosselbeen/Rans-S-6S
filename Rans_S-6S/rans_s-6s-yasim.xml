@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Skyranger 2008 Emmanuel BARANGER
+     Based on FDM of Pierre GEOFFROY
+     21-06-2010 : Update total by Emmanuel BARANGER with Melchior script 
+
+     Wingspan        : 9.5 m
+     Length          : 5.6 m
+     Height          : 2.0 m
+     Empty mass      : 262 kg   (578 lb)
+     Cruise speed    : 140 km/h, 76 kts, 87 mph
+     Cruise approach :  62 km/h, 33 kts, 38 mph
+
+
+
+    Rans S-6S by David Van Mosselbeen 
+    Engine: Rotax 912S (100HP)
+    Wingspan        : 34,5 ft - 10,51 m
+    Length          : 20 ft - x m
+    Height          : 9 ft - x m
+    Gross weight    : 1100 lbs
+    Empty mass      : x kg, 600 lbs
+    Useful load     : x kg, 500 lbs
+    Service Ceiling : x m, 17 500 ft
+    Cruise speed    : 150 km/h, 80 kts, 100 mph
+    Approach speed  :  x km/h, x kts, x mph
+    Range           : 432 miles (4 hours of flight time)
+    Engine weight   : 62 kg, 136 lbs (With electric starter, carburetors, fuel pump, air filters and oil system)
+
+    Va      : 150 km/h, 80 kts, 93 mph (Maneuvering Speed - Do not make full or abrupt control movements above this speed)
+    Vfe     : 105 km/h, 56 kts, 65 mph (Maximum Flap Extended Speed 15E-30E Flaps - Do not exceed this speed with a give flap setting.
+    Vne     : 193 km/h, 104 kts, 120 mph (Never Exceed Speed - Do not exceed this speed in any operation)
+    Vno     : 170 km/h, 92 kts, 106 mph (Maximum Structural Cruising Speed - Do not exceed this speed except in smoot air and then only with caution
+
+
+-->
+
+<airplane mass="600">
+
+    <!-- Approach configuration -->
+    <approach speed="33" aoa="8.05" fuel="0.2">
+        <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+        <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+        <control-setting axis="/controls/flight/flaps" value="1"/>
+    </approach>
+
+    <!-- Cruise configuration -->
+    <cruise speed="80" alt="6000" fuel="0.2">
+        <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
+        <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+        <control-setting axis="/controls/flight/flaps" value="0"/>
+    </cruise>
+
+    <cockpit x="0.719" y="0.326" z="0.310"/>
+
+    <fuselage ax="2.847" ay="0" az="-0.037" bx="-2.749" by="0" bz="0.240" width="1.244" taper="0.2" midpoint="0.25"/>
+
+    <wing x="0.95" y="0.485" z="0.568" 
+        chord="1.486" 
+        length="4.159" 
+        taper="0.95"
+        sweep="-1.1"
+        camber="0.1">
+        <stall aoa="16" width="1.0" peak="1.5"/>
+        <flap0 start="0.00" end="0.47" lift="1.4" drag="1.5"/>
+        <flap1 start="0.47" end="1.00" lift="1.2" drag="1.1"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="5"/>
+    </wing>
+
+    <hstab x="-2.271" y="0" z="0.361"
+        chord="1.25"
+        length="1.18"
+        sweep="9"
+        taper="0.45">
+        <stall aoa="16" width="4" peak="1.5"/>
+        <flap0 start="0" end="1" lift="2.0" drag="1.1" effectiveness="2"/>
+
+        <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+        <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+        <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+    </hstab>
+
+    <vstab x="-2.315" y="0" z="0.34" 
+        chord="1.280"
+        length="0.89"
+        taper="0.75"
+        sweep="25">
+        <stall aoa="14" width="3" peak="1.5"/>
+        <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+
+        <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+        <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+        <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+    </vstab>
+
+    <!-- engine:    ROTAX 912 UL
+         propeller: JUNKERS AVY-3 STD
+    =================================================================================
+    TO-/MC- engine power(kW): 59,6/58 RPM : 5800/5500 (need to verify)
+    propeller max RPM: 2552 (need to verify)
+    diameter: 1,76 m (need to verify)
+    MTOM: 620 kg (need to verify)
+    ref: 
+    http://www.zenithair.com/pdf-doc/912uls-100hp.pdf
+    http://www.flyrotax.com/enginesImpressum/product-rangeImpressum/carburetedImpressum/912-100hpImpressum/engine-data-performance.aspx
+    http://www.rotaxservice.com/rotax_engines/rotax_912ULSs.htm
+    http://home.scarlet.be/~be014061/coyotespecifications6s.htm
+    -->
+    <propeller x="2.96" y="0.0" z="-0.037" 
+        mass="183" 
+        moment="2.27" 
+        radius="0.88" 
+        cruise-speed="80" 
+        cruise-rpm="2112" 
+        cruise-alt="6000" 
+        cruise-power="58" 
+        takeoff-power="100" 
+        takeoff-rpm="2552" 
+        gear-ratio="0.440">
+
+        <piston-engine
+            eng-rpm="5800" 
+            eng-power="100" 
+            displacement="82.6" 
+            compression="10.5"/>
+        <!--actionpt x="2.96" y="0.0" z="-0.037" /-->
+        <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle" />
+        <control-input control="STARTER" axis="/controls/engines/engine[0]/starter" />
+        <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos" />
+        <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture" />
+    </propeller>
+
+    <!-- Nose wheel -->
+    <!-- Tricicle setup -->
+    <gear x="2.36" y="0" z="-1.16"
+        compression="0.15"
+        spring="1" 
+        dfric="0.75"
+        sfric ="1">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-0.5" src1="0.5" dst0="-0.25" dst1="0.25"/>
+    </gear>
+    <!-- Tail dragger
+    <gear x="-2.778" y="0" z="-0.2114"
+        compression="0.15"
+        spring="1" 
+        dfric="0.75"
+        sfric ="1">
+        <control-input axis="/controls/flight/rudder" control="STEER" src0="-0.5" src1="0.5" dst0="-0.25" dst1="0.25"/>
+    </gear>
+    -->
+
+    <!-- Left wheel -->
+    <!-- Tricicle setup -->
+    <gear x="0.96" y="0.89" z="-1.16"
+        compression="0.1" 
+        spring="0.6" 
+        dfric="0.75"
+        sfric ="1">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+    </gear>
+    <!-- Tail dragger
+    <gear x="1.455" y="0.894" z="-1.158"
+        compression="0.1" 
+        spring="0.6" 
+        dfric="0.75"
+        sfric ="1">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+    </gear>
+    -->
+
+    <!-- Right wheel -->
+    <!-- Tricicle setup -->
+    <gear x="0.96" y="-0.89" z="-1.16"
+        compression="0.1" 
+        spring="0.6" 
+        dfric="0.75"
+        sfric ="1">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+    </gear>
+    <!-- Tail dragger
+    <gear x="1.455" y="-0.894" z="-1.158"
+        compression="0.1" 
+        spring="0.6" 
+        dfric="0.75"
+        sfric ="1">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+    </gear>
+    -->
+
+    <!-- Total fuel capacity 18 US Gallons Actually it show up as 20 US GAL in FG -->
+    <!-- Tank after the seats -->
+    <tank x="0.456" y="0" z="-0.310" capacity="59.94" />
+    <!-- Tank Left Wing (empty atm) -->
+    <tank x="0.95" y="-0.70" z="0.55" capacity="29.97" />
+    <!-- Tank Right Wing (empty atm) -->
+    <tank x="0.95" y="0.70" z="0.55" capacity="29.97" />
+    <!--
+    <tank x="0.456" y="0" z="-0.310" capacity="79.25" />
+    <tank x="0.95" y="-0.70" z="0.55" capacity="0" />
+    <tank x="0.95" y="0.70" z="0.55" capacity="0" />
+    -->
+
+    <!-- Mass distribution -->
+    <!-- Centre de la corde x=0.675 y=0 z=0.618 -->
+    <!-- Mise legerement en avant du CG w=1.060 y=0 z=0.550 -->
+    <ballast x="0.70" y="0" z="-0.951" mass="350"/>
+
+    <!-- Weight of pilot and copilot -->
+    <!-- 
+         BREAKS the CG and the aircraft sink a bit in the ground
+
+    <weight x="-1.0" y="0.2313" z="-0.25" mass-prop="/sim/weight[0]/weight-lb"/>
+    <weight x="-1.0" y="-0.2313" z="-0.25" mass-prop="/sim/weight[1]/weight-lb"/>
+    -->
+
+</airplane>

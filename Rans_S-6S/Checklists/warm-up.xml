@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Warm-Up Check</title>
+    <item>
+        <name>Throttle</name>
+        <value>1800 to 2500 RPM</value>
+    </item>
+</PropertyList>

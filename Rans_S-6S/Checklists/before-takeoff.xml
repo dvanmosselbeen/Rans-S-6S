@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Before Takeoff Check</title>
+    <item>
+        <name>Brakes</name>
+        <value>Apply</value>
+    </item>
+    <item>
+        <name>Fuel Valve</name>
+        <value>On</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>3000 RPM</value>
+    </item>
+    <item>
+        <name>Magnetos</name>
+        <value>Check both</value>
+        <value>Max. drop 200 RPM</value>
+    </item>
+    <item>
+        <name>Engine Instruments</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>Idle</value>
+    </item>
+    <item>
+        <name>Avionics</name>
+        <value>Checked and Set</value>
+    </item>
+    <item>
+        <name>Flight Instruments</name>
+        <value>Checked and Set</value>
+    </item>
+    <item>
+        <name>Flaps</name>
+        <value>Check, then up</value>
+    </item>
+    <item>
+        <name>Flight Controls</name>
+        <value>Free and correct</value>
+    </item>
+    <item>
+        <name>Seat Belts and Harnesses</name>
+        <value>Fastened, Check</value>
+    </item>
+</PropertyList>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="rans_s-6s-jsbsim-cnf.xml"> -->
+<PropertyList include="rans_s-6s-yasim-cnf.xml">
+
+    <sim>
+        <description>Rans S-6S (Yasim)</description>
+        <author>David Van Mosselbeen</author>
+    </sim>
+
+    <nasal>
+        <!--
+        <garmin196>
+            <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
+        </garmin196>
+        -->
+        <!--
+        <walkview>
+            <file>Aircraft/Generic/WalkView/walkview.nas</file>
+        </walkview>
+        -->
+    </nasal>
+
+</PropertyList>
+

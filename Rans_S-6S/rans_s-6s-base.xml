@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+    
+    <sim include="Nasal/views.xml">
+
+        <author>David Van Mosselbeen</author>
+        <aircraft-version>0.1</aircraft-version>
+        <status>Alpha</status>
+        <rating>
+            <FDM type="int">1</FDM>
+            <systems type="int">1</systems>
+            <cockpit type="int">1</cockpit>
+            <model type="int">1</model>
+        </rating>
+        <fuel-fraction>1.0</fuel-fraction>
+
+        <!--
+        <startup>
+            <splash-texture>Aircraft/Rans_S6-S/rans_s-6s-splash.png</splash-texture>
+        </startup>
+        -->
+        
+        <sound>
+            <path archive="y">Aircraft/Rans_S-6S/Sounds/rans_s-6s-sound.xml</path>
+        </sound>
+
+        <model>
+            <path archive="y">Aircraft/Rans_S-6S/Models/rans_s-6s.xml</path>
+            <display-callsign type="bool">1</display-callsign>
+            <shadow-3d type="bool">1</shadow-3d>
+
+            <livery>
+                <file type="string">default</file>
+            </livery>
+        </model>
+
+        <multiplay>
+            <chat_display>1</chat_display>
+            <generic>
+                <string n="0" alias="/sim/aero"/>
+                <string n="1" alias="/sim/multiplay/callsign"/>
+                <float n="0" alias="/controls/doors/position-norm[0]"/>
+                <float n="1" alias="/controls/doors/position-norm[1]"/>
+
+                <int n="0" alias="/sim/model/display-callsign"/>
+            </generic>
+        </multiplay>
+
+        <menubar include="Dialogs/rans_s-6s-menu.xml"/>
+
+        <rendering>
+            <shaders>
+                <aircraft>
+                    <reflection>
+                        <quality-level type="int" userarchive="y">1</quality-level>
+                    </reflection>
+                    <lightmap>
+                        <quality-level type="int" userarchive="y">1</quality-level>
+                    </lightmap>
+                    <bumpmap>
+                        <quality-level type="int" userarchive="y">1</quality-level>
+                    </bumpmap>
+                </aircraft>
+            </shaders>
+        </rendering>
+
+        <help>
+            <title>Rans S-6S</title>
+            <line>______________________________________________</line>
+        </help>
+
+        <!-- Seems not that nice
+        <flaps>
+            <setting>0.00</setting>
+            <setting>0.30</setting>
+            <setting>0.45</setting>
+            <setting>0.60</setting>
+        </flaps>
+        -->
+
+        <weight n="0">
+            <name>Pilot</name>
+            <weight-lb>180</weight-lb> 
+            <max-lb>230</max-lb>
+            <min-lb>0</min-lb>
+        </weight>
+
+        <weight n="1">
+            <name>Copilot</name>
+            <weight-lb>0</weight-lb> 
+            <max-lb>230</max-lb>
+            <min-lb>0</min-lb>      
+        </weight>
+
+    <checklists>
+        <checklist include="Checklists/cockpit.xml"/>
+        <checklist include="Checklists/before-start-engine.xml"/>
+        <checklist include="Checklists/start-engine-when-cold.xml"/>
+        <checklist include="Checklists/start-engine-when-hot.xml"/>
+        <checklist include="Checklists/warm-up.xml"/>
+        <checklist include="Checklists/before-taxiing.xml"/>
+        <checklist include="Checklists/taxiing.xml"/>
+        <checklist include="Checklists/before-takeoff.xml"/>
+        <checklist include="Checklists/takeoff-normal.xml"/>
+        <checklist include="Checklists/takeoff-short-field.xml"/>
+        <checklist include="Checklists/climb.xml"/>
+        <checklist include="Checklists/cruise.xml"/>
+        <checklist include="Checklists/descent-normal.xml"/>
+        <checklist include="Checklists/approach-landing.xml"/>
+        <checklist include="Checklists/balked-landing.xml"/>
+        <checklist include="Checklists/after-landing.xml"/>
+        <checklist include="Checklists/shutdown.xml"/>
+    </checklists>
+
+    </sim>
+
+    <input>
+        <keyboard include="Nasal/rans_s-6s-keyboard.xml"/>
+    </input>
+
+    <!--
+    <engines>
+        <engine>
+            <rpm type="double">1600</rpm>
+            <magnetos>true</magnetos>
+            <running>true</running>
+        </engine>
+    </engines>
+    -->
+
+    <controls>
+        <!--
+        <lighting>
+            <instruments-norm>1.0</instruments-norm>
+        </lighting>
+        <fuel>
+            <switch-position type = "int">1</switch-position>
+        </fuel>
+        -->
+        <gear>
+            <brake-parking type="double">1.0</brake-parking>
+            <gear-down type="bool">1.0</gear-down>
+        </gear>
+        <engines>
+            <engine>
+                <mixture>1.0</mixture>
+            </engine>
+        </engines>
+        <!--
+        <electric>
+            <avionics-switch type="bool">1</avionics-switch>
+        </electric>
+        -->
+        <doors>
+            <open n="0" type="bool">0</open>
+            <open n="1" type="bool">0</open>
+            <position-norm n="0" type="double">0</position-norm>
+            <position-norm n="1" type="double">0</position-norm>
+        </doors>
+    </controls>
+
+    <nasal>
+        <!--
+        <doors>
+            <file>Aircraft/Rans_S-6S/Nasal/doors.nas</file>
+        </doors>
+        -->
+
+        <!-- ############################### -->
+        <!-- ######## DUAL CONTROL ######### -->
+        <dual_control_tools>
+            <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+        </dual_control_tools>
+        <aircraft_dual_control>
+            <file>Aircraft/Rans_S-6S/Nasal/rans_s-6s-dual-control.nas</file>
+        </aircraft_dual_control>
+        <dual_control>
+            <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+        </dual_control>
+        <!-- ######## DUAL CONTROL ######### -->
+        <!-- ############################### -->
+
+        <rans_s_6s>
+            <file>Aircraft/Rans_S-6S/Nasal/rans_s-6s.nas</file>
+            <file>Aircraft/Rans_S-6S/Nasal/liveries.nas</file>
+            <file>Aircraft/Rans_S-6S/Nasal/light.nas</file>
+            <file>Aircraft/Rans_S-6S/Nasal/electrical.nas</file>
+            <!--file>Aircraft/Rans_S-6S/Nasal/interpolate.nas</file-->
+        </rans_s_6s>
+    </nasal>
+
+</PropertyList>

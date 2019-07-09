@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Before Start Engine Check</title>
+    <item>
+        <name>Preflight Inspection</name>
+        <value>Complete</value>
+    </item>
+    <item>
+        <name>Seat Belts and Harnesses</name>
+        <value>Fastened</value>
+    </item>
+    <item>
+        <name>Brakes</name>
+        <value>Apply</value>
+    </item>
+    <item>
+        <name>Switches</name>
+        <value>Off</value>
+    </item>
+    <item>
+        <name>Circuit Breakers</name>
+        <value>In</value>
+    </item>
+    <item>
+        <name>Radios</name>
+        <value>Off</value>
+    </item>
+    <item>
+        <name>Cockpit Lighting</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>Nav and Strobe Lights</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>All Switches</name>
+        <value>Off</value>
+    </item>
+    <item>
+        <name>Fuel Valve</name>
+        <value>On</value>
+    </item>
+</PropertyList>

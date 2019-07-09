@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>trimSwitch.ac</path>
+
+  <animation>
+    <object-name>bezel</object-name>
+    <object-name>switch</object-name>
+    <object-name>trimup</object-name>
+    <object-name>trimdown</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>trimup</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/flight/elevator-trim</property>
+        <step type="double">-0.001</step>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/trim-anim</property>
+        <value type="int">1</value>
+      </binding>          
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/flight/trim-anim</property>
+          <value type="int">0</value>
+        </binding>          
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>trimdown</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/flight/elevator-trim</property>
+        <step type="double">0.001</step>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/trim-anim</property>
+        <value type="int">-1</value>
+      </binding>          
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/flight/trim-anim</property>
+          <value type="int">0</value>
+        </binding>          
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switch</object-name>
+    <property>controls/flight/trim-anim</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> -10 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep>  10 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

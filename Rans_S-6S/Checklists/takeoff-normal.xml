@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Takeoff Normal Check</title>
+    <item>
+        <name>Brakes</name>
+        <value>Release</value>
+    </item>
+    <item>
+        <name>Flaps</name>
+        <value>Up</value>
+    </item>
+    <item>
+        <name>Engine Instrumets</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>Full Throttle</value>
+    </item>
+    <item>
+        <name>Left rudder (Right rudder for Rotax 12 engine)</name>
+        <value>As needed</value>
+    </item>
+    <item>
+        <name>Airspeed</name>
+        <value>Rotate at 75 MPH</value>
+        <value>(65 KTS, 120 KM/H) IAS</value>
+    </item>
+    <item>
+        <name>Accelerate to 55 MPH (48 KTS, 89 KM/H),</name>
+        <value></value>
+    </item>
+    <item>
+        <name>then climb out.</name>
+        <value></value>
+    </item>
+</PropertyList>

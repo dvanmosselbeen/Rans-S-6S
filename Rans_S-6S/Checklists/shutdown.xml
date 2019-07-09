@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Shutdown Check</title>
+    <item>
+        <name>Brakes</name>
+        <value>Apply</value>
+    </item>
+    <item>
+        <name>Electrical and Avionics</name>
+        <value>Off</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>Idle</value>
+    </item>
+    <item>
+        <name>Ignition</name>
+        <value>Off</value>
+    </item>
+    <item>
+        <name>Brakes</name>
+        <value>Release</value>
+    </item>
+    <item>
+        <name>Chocks and Tie Downs</name>
+        <value>Install</value>
+    </item>
+</PropertyList>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- PropertyList include="rans_s_6s-base.xml"-->
+<PropertyList>
+
+
+    <sim>
+        <description>Rans S-6S Copilot</description>
+        <author>David Van Mosselbeen</author>
+        <flight-model>null</flight-model>
+
+        <model>
+            <path>Aircraft/Rans_S-6S/Models/rans_s-6s-copilot.xml</path>
+        </model>
+
+        <multiplay>
+            <chat_display>1</chat_display>
+            <generic>
+                <int n="0" type="int">  0 </int>  <!-- RESERVED FOR DUAL CONTROL (Boolean Switch)-->
+                <int n="9" type="int">  0 </int>  <!-- RESERVED FOR DUAL CONTROL (Boolean Light Switch)-->
+                <int n="6" alias="/controls/switches/smoke">0</int> <!-- 6 smoke -->
+                <int n="7">0</int>  <!-- 7 color -->
+                
+                <float n="3" alias="/controls/flight/elevator-trim"/>
+                <float n="10" alias="/controls/engines/engine[0]/throttle"/>
+                <float n="11" alias="/controls/engines/engine[0]/mixture"/>
+                <float n="12" alias="/controls/gear/brake-left"/>
+                <float n="13" alias="/controls/gear/brake-right"/>
+                <float n="14" alias="/controls/flight/elevator"/>
+                <float n="15" alias="/controls/flight/rudder"/>
+                <float n="16" alias="/controls/flight/aileron"/>
+
+                <string n="0" type="string"></string> <!-- RESERVED FOR DUAL CONTROL (Analog Switch - TDM)-->
+            </generic>
+        </multiplay>
+
+        <menubar include="Dialogs/rans_s-6s-copilot.xml"/>
+    </sim>
+
+    <nasal>
+        <!-- ############################### -->
+        <!-- ######## DUAL CONTROL ######### -->
+        <dual_control_tools>
+            <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+        </dual_control_tools>
+        <aircraft_dual_control>
+            <file>Aircraft/Rans_S-6S/Nasal/rans_s-6s-dual-control.nas</file>
+        </aircraft_dual_control>
+        <dual_control>
+            <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+        </dual_control>
+        <!-- ######## DUAL CONTROL ######### -->
+        <!-- ############################### -->
+        <rans_s_6s>
+            <file>Aircraft/Rans_S-6S/Nasal/rans_s-6s.nas</file>
+        </rans_s_6s>
+    </nasal>
+
+</PropertyList>

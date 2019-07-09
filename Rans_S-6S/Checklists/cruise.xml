@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Cruise Check</title>
+    <item>
+        <name>Throttle</name>
+        <value>4800 RPM</value>
+    </item>
+    <item>
+        <name>Trim Tab</name>
+        <value>Adjus</value>
+    </item>
+    <item>
+        <name>Engine Instruments</name>
+        <value>Monitor</value>
+    </item>
+</PropertyList>

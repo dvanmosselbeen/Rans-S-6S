@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Starting Engine When Hot Check</title>
+    <item>
+        <name>Throttle</name>
+        <value>Set</value>
+    </item>
+    <item>
+        <name>Brakes</name>
+        <value>Apply</value>
+    </item>
+    <item>
+        <name>Propeller Area</name>
+        <value>Clear</value>
+    </item>
+    <item>
+        <name>Starter</name>
+        <value>Engage</value>
+    </item>
+    <item>
+        <name>Throttle</name>
+        <value>Advance</value>
+    </item>
+    <item>
+        <name>Coolant Pressure</name>
+        <value>Check</value>
+    </item>
+</PropertyList>

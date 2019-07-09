@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    
+    <path>switch_label.ac</path>
+
+    <animation>
+        <type>material</type>
+        <texture>switch_gps_label.png</texture>
+    </animation>
+
+</PropertyList>

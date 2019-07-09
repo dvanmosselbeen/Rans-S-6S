@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+    <nasal>
+        <load>
+            cmdarg().getNode("sim/model/ac-type", 1).setValue("rans_s-6s-copilot");
+        </load>
+        <unload>
+            cmdarg().getNode("sim/model/ac-type", 1).setValue("");
+        </unload>
+    </nasal>
+  
+</PropertyList>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="rans_s-6s-base.xml">
+    
+    <sim>
+        <description>Rans S-6S (YASim)</description>
+        <flight-model archive="y">yasim</flight-model>
+        <aero archive="y">rans_s-6s-yasim</aero>
+    </sim>
+ 
+</PropertyList>

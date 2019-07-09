@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>AI.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>cache</object-name>
+    <object-name>ajusteknob</object-name>
+    <object-name>aircraft</object-name>
+    <object-name>cageknob</object-name>
+    <object-name>cagedindicator</object-name>
+    <object-name>pitch</object-name>
+    <object-name>roll</object-name>
+    <object-name>reference</object-name>
+    <object-name>rollreference</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/DR400-jsbSim/Models/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>aircraft</object-name>
+    <object-name>cagedindicator</object-name>
+    <object-name>cache</object-name>
+    <object-name>pitch</object-name>
+    <object-name>roll</object-name>
+    <object-name>rollreference</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>cagedindicator</object-name>
+    <condition>
+      <or>
+        <property>/instrumentation/attitude-indicator/caged-flag</property>
+        <equals>
+          <property>/systems/electrical/volts</property>
+          <value>0</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <name>Pitch</name>
+    <type>translate</type>
+    <object-name>pitch</object-name>
+    <property>/instrumentation/attitude-indicator/indicated-pitch-deg</property>
+    <factor>-0.0007</factor>
+    <min-m>-0.01575</min-m>
+    <max-m>0.01575</max-m>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>Horizon Offset</name>
+    <type>translate</type>
+    <object-name>pitch</object-name>
+    <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <factor>-0.0007</factor>
+    <min-m>-0.01575</min-m>
+    <max-m>0.01575</max-m>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>cageknob</object-name>
+    <property>/instrumentation/attitude-indicator/caged-flag</property>
+    <factor>0.005</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>roll</object-name>
+    <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+    <factor>-1</factor>
+    <axis>
+     <x> -1 </x>
+     <y>  0 </y>
+     <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pitch</object-name>
+    <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+    <factor>-1</factor> <!-- ini -0.5 -->
+    <axis>
+     <x> -1 </x>
+     <y>  0 </y>
+     <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ajusteknob</object-name>
+    <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <factor>7.5</factor> <!-- ini -0.5 -->
+    <center>
+      <z-m>-0.036</z-m>
+    </center>
+    <axis>
+     <x>  1 </x>
+     <y>  0 </y>
+     <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>AdjustCCW</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step type="double">0.5</step>
+        <min>-24</min>
+        <max> 24</max>
+      </binding>          
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step type="double">1</step>
+        <min>-24</min>
+        <max> 24</max>
+      </binding>          
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step type="double">-1</step>
+        <min>-24</min>
+        <max> 24</max>
+      </binding>          
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>AdjustCW</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step type="double">-0.5</step>
+        <min>-24</min>
+        <max> 24</max>
+      </binding>          
+    </action>
+    <action>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step type="double">1</step>
+        <min>-24</min>
+        <max> 24</max>
+      </binding>          
+    </action>
+    <action>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <step type="double">-1</step>
+        <min>-24</min>
+        <max> 24</max>
+      </binding>          
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>cageknob</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/attitude-indicator/caged-flag</property>
+        <value type="bool">true</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>instrumentation/attitude-indicator/caged-flag</property>
+          <value type="bool">false</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <!-- TEXT OSG -->
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">Attitude Indicator</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.05</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </text>
+
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+</PropertyList>
+
+

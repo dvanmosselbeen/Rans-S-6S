@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    
+    <default>
+        <menu n="10">
+            <label>Rans S-6S</label>
+            <enabled type="bool">true</enabled>
+            <item>
+                <label>Options</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>rans_s_6s.config_dlg.open()</script>
+                </binding>
+            </item>
+            <item>
+                <label>Select MP-pilot</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);</script>
+                </binding>
+            </item>
+        </menu>
+    </default>
+
+</PropertyList>
+

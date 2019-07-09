@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Taxiing Check</title>
+    <item>
+        <name>Throttle</name>
+        <value>Apply slowly</value>
+    </item>
+    <item>
+        <name>Brakes</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>Nosewheel Steering</name>
+        <value>Check</value>
+    </item>
+    <item>
+        <name>Compass</name>
+        <value>Check</value>
+    </item>
+</PropertyList>

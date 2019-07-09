@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Approach and Landing Check</title>
+    <item>
+        <name>Airspeed</name>
+        <value>Trim to 65 MPH</value>
+        <value>(56 KTS, 105 KM/H)</value>
+    </item>
+    <item>
+        <name>Flaps</name>
+        <value>Up</value>
+    </item>
+    <item>
+        <name>Final Approach Speed</name>
+        <value>45 MPH</value>
+        <value>(39 KTS, 72 KM/H)</value>
+    </item>
+</PropertyList>

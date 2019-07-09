@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>Before Taxiing Check</title>
+    <item>
+        <name>Seat Belts and Harnesses</name>
+        <value>Fastened, Check</value>
+    </item>
+    <item>
+        <name>Avionics</name>
+        <value>On, As required</value>
+    </item>
+    <item>
+        <name>Lights</name>
+        <value>As required</value>
+    </item>
+    <item>
+        <name>Taxi Area</name>
+        <value>Clear</value>
+    </item>
+</PropertyList>

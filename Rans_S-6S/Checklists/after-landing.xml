@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <title>After Landing Check</title>
+    <item>
+        <name>Flaps</name>
+        <value>Up</value>
+    </item>
+    <item>
+        <name>Trim Tab</name>
+        <value>Return for takeoff</value>
+    </item>
+</PropertyList>
