@@ -1,4 +1,4 @@
-Rans S-6S by David Van Mosselbeen <david.van.mosselbeen@telenet.be
+Rans S-6S by David Van Mosselbeen <david.van.mosselbeen@gmail.com>
 
 Content
 =======
