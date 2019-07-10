@@ -15,11 +15,9 @@
         </rating>
         <fuel-fraction>1.0</fuel-fraction>
 
-        <!--
         <startup>
-            <splash-texture>Aircraft/Rans_S6-S/rans_s-6s-splash.png</splash-texture>
+            <splash-texture>Aircraft/Rans_S-6S/rans_splash.png</splash-texture>
         </startup>
-        -->
         
         <sound>
             <path archive="y">Aircraft/Rans_S-6S/Sounds/rans_s-6s-sound.xml</path>
