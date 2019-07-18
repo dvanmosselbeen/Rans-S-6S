@@ -20,9 +20,8 @@
         <object-name>propblur</object-name>
         <object-name>propdisc</object-name>
         <object-name>WindShield</object-name>
-        <object-name>DoorGlass</object-name>
-	<object-name>DoorGlassL</object-name>
-	<object-name>DoorGlassR</object-name>
+		<object-name>DoorGlassL</object-name>
+		<object-name>DoorGlassR</object-name>
     </effect>
 
     <animation>
@@ -101,7 +100,8 @@
     <animation>
         <inherits-from>Aircraft/Rans_S-6S/Models/Effects/glass-uber</inherits-from>
         <object-name>WindShield</object-name>
-        <object-name>DoorGlass</object-name>
+		<object-name>DoorGlassL</object-name>
+		<object-name>DoorGlassR</object-name>
     </animation>
 
     <!-- Fake shadow -->
