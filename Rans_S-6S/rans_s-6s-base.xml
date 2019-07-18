@@ -4,15 +4,6 @@
     
     <sim include="Nasal/views.xml">
 
-        <author>David Van Mosselbeen</author>
-        <aircraft-version>0.1</aircraft-version>
-        <status>Alpha</status>
-        <rating>
-            <FDM type="int">1</FDM>
-            <systems type="int">1</systems>
-            <cockpit type="int">1</cockpit>
-            <model type="int">1</model>
-        </rating>
         <fuel-fraction>1.0</fuel-fraction>
 
         <startup>
@@ -66,6 +57,38 @@
         <help>
             <title>Rans S-6S</title>
             <line>______________________________________________</line>
+            <line>To Start the aircraft, use the autostart feature in the Rans S-6S > Options menu, then press s to start the engine.</line>
+            <line>______________________________________________</line>
+			<line>PERFORMANCE</line>
+			<line>----------------------------------------------</line>
+			<line>Take Off Roll ........................... 220ft / 210ft - 67,05 m / 64 m</line>
+			<line>Cruise ....................................... 110 mph / 115 mph - 177 km/h / 185 km/h</line>
+			<line>VNE .......................................... 130 mph - 209,21 km/h</line>
+			<line>Stall Clean .............................. 41 mph - 66 km/h</line>
+			<line>Stall Flaps .............................. 36 mph - 58 km/h</line>
+			<line>Roll Rate ................................. 80 deg / sec</line>
+			<line>Endurance .............................. 4 hrs / 3.6 hrs</line>
+			<line>Range ....................................... 440 miles / 414 miles - 708 km</line>
+			
+			<line>----------------------------------------------</line>
+			<line>Engine: Rotax 912S (100HP)</line>
+			<line>Wingspan................... 34,5 ft - 10,51 m</line>
+			<line>Length..................... 20 ft - x m</line>
+			<line>Height..................... 9 ft - x m</line>
+			<line>Gross weight............... 1100 lbs</line>
+			<line>Empty mass................. x kg, 600 lbs</line>
+			<line>Useful load................ x kg, 500 lbs</line>
+			<line>Service Ceiling............ x m, 17 500 ft</line>
+			<line>Cruise speed............... 150 km/h, 80 kts, 100 mph</line>
+			<line>Approach speed.............  x km/h, x kts, x mph</line>
+			<line>Range...................... 432 miles (4 hours of flight time)</line>
+			<line>Engine weight.............. 62 kg, 136 lbs (With electric starter, carburetors, fuel pump, air filters and oil system)</line>
+			<line>----------------------------------------------</line>
+			<line>Va...... 150 km/h, 80 kts, 93 mph (Maneuvering Speed - Do not make full or abrupt control movements above this speed)</line>
+			<line>Vfe..... 105 km/h, 56 kts, 65 mph (Maximum Flap Extended Speed 15E-30E Flaps - Do not exceed this speed with a give flap setting.</line>
+			<line>Vne..... 193 km/h, 104 kts, 120 mph (Never Exceed Speed - Do not exceed this speed in any operation)</line>
+			<line>Vno..... 170 km/h, 92 kts, 106 mph (Maximum Structural Cruising Speed - Do not exceed this speed except in smoot air and then only with caution</line>
+			<line>______________________________________________</line>
         </help>
 
         <!-- Seems not that nice
