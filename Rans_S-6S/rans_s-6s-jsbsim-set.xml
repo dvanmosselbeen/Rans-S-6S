@@ -4,16 +4,27 @@
 
     <sim>
         <description>Rans S-6S (JSBSim)</description>
-        <author>David Van Mosselbeen</author>
+		<long-description>The Rans S-6S is a little ulm. This JSBSim FDM version a little less realistic than the Yasim version. There's some animations and FDM issues.</long-description>
+        <author>3D Model (David Van Mosselbeen) - FDM (Aeromatic v 0.9) and The FlightGear community</author>
+		<aircraft-version>1.2</aircraft-version>
+        <status>Alpha</status>
+        <rating>
+            <FDM type="int">3</FDM>
+            <systems type="int">3</systems>
+            <cockpit type="int">3</cockpit>
+            <model type="int">4</model>
+        </rating>
     </sim>
 
-    <!--
     <nasal>
         <garmin196>
-            <file>Aircraft/Instruments-3d/garmin196/garmin196.nas</file>
+            <file>Models\Interior\Panel\Instruments\garmin196\garmin196.nas</file>
         </garmin196>
+      
+        <walkview>
+            <file>Aircraft/Generic/WalkView/walkview.nas</file>
+        </walkview>
     </nasal>
-    -->
 
 </PropertyList>
 
