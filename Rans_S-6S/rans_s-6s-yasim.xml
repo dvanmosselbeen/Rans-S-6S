@@ -129,7 +129,7 @@
         gear-ratio="0.440">
 
         <piston-engine
-            eng-rpm="5800" 
+            eng-rpm="5500" 
             eng-power="100" 
             displacement="82.6" 
             compression="10.5"/>
