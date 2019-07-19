@@ -150,6 +150,7 @@
     </engines>
     -->
 
+	<!-- Set some default values -->
     <controls>
         <!--
         <lighting>
@@ -168,11 +169,10 @@
                 <mixture>1.0</mixture>
             </engine>
         </engines>
-        <!--
         <electric>
-            <avionics-switch type="bool">1</avionics-switch>
+            <avionics-switch type="bool">0</avionics-switch>
         </electric>
-        -->
+        
         <doors>
             <open n="0" type="bool">0</open>
             <open n="1" type="bool">0</open>
@@ -182,11 +182,10 @@
     </controls>
 
     <nasal>
-        <!--
+
         <doors>
             <file>Aircraft/Rans_S-6S/Nasal/doors.nas</file>
         </doors>
-        -->
 
         <!-- ############################### -->
         <!-- ######## DUAL CONTROL ######### -->
@@ -207,7 +206,7 @@
             <file>Aircraft/Rans_S-6S/Nasal/liveries.nas</file>
             <file>Aircraft/Rans_S-6S/Nasal/light.nas</file>
             <file>Aircraft/Rans_S-6S/Nasal/electrical.nas</file>
-            <!--file>Aircraft/Rans_S-6S/Nasal/interpolate.nas</file-->
+            <file>Aircraft/Rans_S-6S/Nasal/interpolate.nas</file>
         </rans_s_6s>
     </nasal>
 
