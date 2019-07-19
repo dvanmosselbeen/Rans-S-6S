@@ -28,7 +28,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>Aircraft/DR400-jsbSim/Models/Effects/glass_shader.png</texture>
+    <texture>Aircraft/Rans_S-6S/Models/Effects/glass_shader.png</texture>
     <object-name>vitre</object-name>
   </animation>
 

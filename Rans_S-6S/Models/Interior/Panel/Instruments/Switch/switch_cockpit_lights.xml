@@ -17,7 +17,7 @@
     <animation>
         <type>rotate</type>
         <object-name>SwitchLever</object-name>
-        <property>controls/lighting/instrument-lights</property>
+        <property>/controls/lighting/instrument-lights</property>
         <factor> -60 </factor>
         <axis>
             <x> 0 </x>
@@ -35,7 +35,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/instrument-lights</property>
+                <property>/controls/lighting/instrument-lights</property>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -46,6 +46,15 @@
                 <property>sim/sound/switch</property>
             </binding>
         </action>
+		<hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>cockpit-lights-switch</tooltip-id>
+                <label>Cockpit Lights: %s</label>
+                <mapping>on-off</mapping>
+                <property>/controls/lighting/instrument-lights</property>
+            </binding>
+        </hovered>
     </animation>
 
 </PropertyList>

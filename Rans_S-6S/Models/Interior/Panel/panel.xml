@@ -120,12 +120,23 @@
     -->
 
     <!-- Handheld Radio -->
+	<!--
     <model>
         <path>Instruments/IC-A6FR/IC-A6FR_hanheld_radio.ac</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m>  0.18 </y-m>
             <z-m>  0.08 </z-m>
+        </offsets>
+    </model>
+	-->
+
+    <model>
+        <path>Instruments\ky196\ky196-comm1.xml</path>
+        <offsets>
+            <x-m>  0.02 </x-m>
+            <y-m>  0.18 </y-m>
+            <z-m>  0.137491 </z-m>
         </offsets>
     </model>
 
@@ -161,34 +172,13 @@
         </offsets>
     </model>
 
-    <!-- Intercom -->
-    <model>
-        <path>Aircraft/Instruments-3d/ar-3201/ar-3201.xml</path>
-        <offsets>
-            <x-m>  0 </x-m>
-            <y-m>  0.28 </y-m>
-            <z-m> -0.01 </z-m>
-        </offsets>
-    </model>
-
     <!-- Horameter -->
-    <!--
-    <model>
-        <path>Aircraft/Instruments-3d/clock/M877/m877.xml</path>
-        <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m>  0.37 </y-m>
-            <z-m> -0.01 </z-m>
-        </offsets>
-    </model>
-    -->
-
     <model>
         <path>Instruments/horameter/horameter.xml</path>
         <offsets>
             <x-m>  0.01 </x-m>
-            <y-m>  0.37 </y-m>
-            <z-m> -0.01 </z-m>
+            <y-m>  0.189911 </y-m>
+            <z-m> 0.06 </z-m>
         </offsets>
     </model>
 
@@ -226,8 +216,9 @@
         </offsets>
     </model>
 
+	<!-- Magneto switch -->
     <model>
-        <path>Aircraft/Instruments-3d/magneto-switch/mags.xml</path>
+        <path>Instruments/magneto-switch/mags.xml</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m>  0 </y-m>
@@ -235,8 +226,9 @@
         </offsets>
     </model>
 
+	<!-- Trim wheel -->
     <model>
-        <path>Aircraft/Instruments-3d/trim/trimwheel.xml</path>
+        <path>Instruments/trim/trimwheel.xml</path>
         <offsets>
             <x-m> 0 </x-m>
             <y-m>  0.05 </y-m>
@@ -244,10 +236,31 @@
         </offsets>
     </model>
 
+	<!-- Trim switch -->
+	<!--
+    <model>
+        <path>Instruments/trim/trimSwitch.xml</path>
+        <offsets>
+            <x-m> 0.1</x-m>
+            <y-m>  0.05 </y-m>
+            <z-m> -0.14982 </z-m>
+        </offsets>
+    </model>
+	-->
 
     <!-- SHOULD BE TRIM INDICATOR?? -->
     <model>
         <path>Instruments/trim/TrimIndicator.xml</path>
+        <offsets>
+            <x-m>  0.005 </x-m>
+            <y-m>  0 </y-m>
+            <z-m> -0.14982 </z-m>
+        </offsets>
+    </model>
+
+    <!-- FlAPS INDICATOR -->
+    <model>
+        <path>Instruments\flaps\flaps.xml</path>
         <offsets>
             <x-m>  0.005 </x-m>
             <y-m>  0 </y-m>
@@ -270,7 +283,7 @@
 
     <!-- Radio -->
     <model> 
-        <path>Instruments/Switch/switch_rnd.ac</path>
+        <path>Instruments/Switch/switch_radio.xml</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m> -0.03 </y-m>
@@ -320,9 +333,9 @@
         </offsets>
     </model>
 
-    <!-- GPS -->
+    <!-- Landing Lights -->
     <model> 
-        <path>Instruments/Switch/switch_rnd.ac</path>
+        <path>Instruments/Switch/switch_landing_lights.xml</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m>  0.03 </y-m>
@@ -330,7 +343,7 @@
         </offsets>
     </model>
     <model> 
-        <path>Instruments/Switch/switch_gps_label.xml</path>
+        <path>Instruments/Switch/switch_landing_lights_label.xml</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m>  0.03 </y-m>
@@ -348,7 +361,7 @@
 
     <!-- Nav lights -->
     <model> 
-        <path>Instruments/Switch/switch_rnd.ac</path>
+        <path>Instruments/Switch/switch_navigation_lights.xml</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m>  0.06 </y-m>
@@ -435,6 +448,7 @@
     </model>
 
     <!-- MASTER -->
+	<!--
     <model> 
         <path>Instruments/Switch/switch_master.xml</path>
         <offsets>
@@ -451,4 +465,5 @@
             <z-m> -0.215 </z-m>
         </offsets>
 	</model>
+	-->
 </PropertyList>

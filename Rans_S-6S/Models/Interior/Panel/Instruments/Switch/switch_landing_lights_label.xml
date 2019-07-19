@@ -5,7 +5,7 @@
 
     <animation>
         <type>material</type>
-        <texture>switch_gps_label.png</texture>
+        <texture>switch_landing_lights_label.png</texture>
     </animation>
 
 </PropertyList>

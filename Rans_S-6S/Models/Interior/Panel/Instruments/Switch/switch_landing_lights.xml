@@ -17,7 +17,7 @@
     <animation>
         <type>rotate</type>
         <object-name>SwitchLever</object-name>
-        <property>/controls/engines/engine/fuel-pump</property>
+        <property>/controls/lighting/landing-lights</property>
         <factor> -60 </factor>
         <axis>
             <x> 0 </x>
@@ -35,19 +35,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>/controls/engines/engine/fuel-pump</property>
-            </binding>
-            <binding>
-                <command>property-toggle</command>
-                <property>/consumables/fuel/tank[0]/selected</property>
-            </binding>
-            <binding>
-                <command>property-toggle</command>
-                <property>/consumables/fuel/tank[1]/selected</property>
-            </binding>
-            <binding>
-                <command>property-toggle</command>
-                <property>/consumables/fuel/tank[2]/selected</property>
+                <property>/controls/lighting/landing-lights</property>
             </binding>
             <binding>
                 <command>property-toggle</command>
@@ -58,13 +46,13 @@
                 <property>sim/sound/switch</property>
             </binding>
         </action>
-		<hovered>
+	       <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>fuell-pump-switch</tooltip-id>
-                <label>Fuell Pump: %s</label>
+                <tooltip-id>nav-light-switch</tooltip-id>
+                <label>Landing Lights: %s</label>
                 <mapping>on-off</mapping>
-                <property>/controls/engines/engine/fuel-pump</property>
+                <property>/controls/lighting/landing-lights</property>
             </binding>
         </hovered>
     </animation>
