@@ -14,6 +14,49 @@
             <path archive="y">Aircraft/Rans_S-6S/Sounds/rans_s-6s-sound.xml</path>
         </sound>
 
+        <previews>
+          <preview>
+            <type>panel</type>
+            <splash type="bool">false</splash>
+            <path>Previews/Rans_S-6S-preview0.jpg</path>
+          </preview>
+          <preview>
+            <type>exterior</type>
+            <splash type="bool">true</splash>
+            <path>Previews/Rans_S-6S-preview1.jpg</path>
+          </preview>
+          <preview>
+            <type>exterior</type>
+            <splash type="bool">true</splash>
+            <path>Previews/Rans_S-6S-preview2.jpg</path>
+          </preview>
+          <preview>
+            <type>panel</type>
+            <splash type="bool">true</splash>
+            <path>Previews/Rans_S-6S-preview3.jpg</path>
+          </preview>
+          <preview>
+            <type>panel</type>
+            <splash type="bool">true</splash>
+            <path>Previews/Rans_S-6S-preview4.jpg</path>
+          </preview>
+          <preview>
+            <type>panel</type>
+            <splash type="bool">true</splash>
+            <path>Previews/Rans_S-6S-preview5.jpg</path>
+          </preview>
+          <preview>
+            <type>panel</type>
+            <splash type="bool">true</splash>
+            <path>Previews/Rans_S-6S-preview6.jpg</path>
+          </preview>
+          <preview>
+            <type>exterior</type>
+            <splash type="bool">true</splash>
+            <path>Previews/Rans_S-6S-preview7.jpg</path>
+          </preview>
+        </previews>
+
         <model>
             <path archive="y">Aircraft/Rans_S-6S/Models/rans_s-6s.xml</path>
             <display-callsign type="bool">1</display-callsign>
