@@ -121,4 +121,15 @@
         </axis>
     </animation>
 
+  <!--  Palonnier -->
+  
+  <model>
+    <path>Aircraft/Rans_S-6S/Models/Interior/Pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -1.84697 </x-m>
+      <y-m>  0.0 </y-m>  
+      <z-m> -0.421853 </z-m>  
+    </offsets>
+  </model>
+
 </PropertyList>
