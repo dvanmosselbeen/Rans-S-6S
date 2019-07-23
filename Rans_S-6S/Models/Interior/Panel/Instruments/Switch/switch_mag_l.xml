@@ -17,7 +17,7 @@
     <animation>
         <type>rotate</type>
         <object-name>SwitchLever</object-name>
-        <property>/controls/engines/engine/magnetosmaster-bat</property>
+        <property>controls/engines/engine/magnetoL</property>
         <factor> -60 </factor>
         <axis>
             <x> 0 </x>
@@ -25,36 +25,35 @@
             <z> 0 </z>
         </axis>
     </animation>
-    
-    <animation>
-        <type>pick</type>
-        <visible>true</visible>
-        <object-name>SwitchLever</object-name>
-        <action>
-            <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>property-toggle</command>
-                <property>/controls/engines/engines</property>
-            </binding>
-            <binding>
-                <command>property-toggle</command>
-                <property>sim/model/click</property>
-            </binding>
-            <binding>
-                <command>property-toggle</command>
-                <property>sim/sound/switch</property>
-            </binding>
-        </action>
-		<hovered>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SwitchBase</object-name>
+    <object-name>SwitchLever</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+		<property>controls/engines/engine/magnetoL</property>
+      </binding>
+	  <binding>
+        <command>property-toggle</command>
+		<property>controls/engines/engine/magnetos</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+    <hovered>
             <binding>
                 <command>set-tooltip</command>
-                <tooltip-id>master-switch</tooltip-id>
-                <label>Mag left: %s</label>
+                <tooltip-id>Left-magneto-switch</tooltip-id>
+                <label>L Magneto switch: %s</label>
                 <mapping>on-off</mapping>
-                <property>/controls/engines/engine[0]/magnetos</property>
+                <property>controls/engines/engine/magnetoL</property>
             </binding>
-        </hovered>
-    </animation>
+    </hovered>
+  </animation>
 
 </PropertyList>
