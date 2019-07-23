@@ -2,55 +2,86 @@
 
 <PropertyList>
 
-  <path>ASI.ac</path>
+  <path>asi.ac</path>
 
   <animation>
-    <object-name>fond</object-name>
     <object-name>face</object-name>
     <object-name>needle</object-name>
-
-    <object-name>vitre</object-name>
   </animation>
 
   <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
+    <name>BackLightAnimation</name>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <object-name>backlight</object-name>
+    <position>
+      <x> 0.015 </x>
+      <y> 0.00 </y>
+      <z>-0.05 </z>
+    </position>
+    <direction>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  1.0 </z>
+    </direction>
+    <ambient>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.5 </r>
+      <g>  0.404 </g>
+      <b>  0.2 </b>
+      <a>  1.0 </a>
+    </diffuse>
+    <specular>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </specular>
+    <dim-factor>
+      <property>systems/electrical/outputs/instrument-lights</property>
+      <!-- optional begin -->
+      <factor>0.04</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1</max>
+      <!-- optional end -->
+    </dim-factor>
+    <attenuation>
+      <c>  0.2 </c>
+      <l>  0.2 </l>
+      <q>  0.4 </q>
+    </attenuation>
+    <exponent>  8.0 </exponent>
+    <cutoff>   48.0   </cutoff>
+    <near-m>    0.0   </near-m>
+    <far-m>     0.09 </far-m>
   </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Rans_S-6S/Models/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>face</object-name>
-    <object-name>needle</object-name>
-    <emission>
-      <red>   0.9 </red>
-      <green> 0.5 </green>
-      <blue>  0.2 </blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
-    </emission>
+    <type>select</type>
+    <object-name>BackLightAnimation</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
   </animation>
 
   <animation> 
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kmh</property>
     <interpolation>
-      <entry><ind>  0.00</ind><dep>0</dep></entry>
-      <entry><ind> 21.60</ind><dep>35</dep></entry>
-      <entry><ind> 32.40</ind><dep>72</dep></entry>
-      <entry><ind> 43.20</ind><dep>116</dep></entry>
-      <entry><ind> 54.00</ind><dep>162</dep></entry>
-      <entry><ind> 64.80</ind><dep>204</dep></entry>
-      <entry><ind> 75.60</ind><dep>239</dep></entry>
-      <entry><ind> 86.40</ind><dep>267</dep></entry>
-      <entry><ind> 97.20</ind><dep>294</dep></entry>
-      <entry><ind>108.00</ind><dep>321</dep></entry>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  20 </ind><dep>  17 </dep></entry>
+      <entry><ind>  50 </ind><dep>  72 </dep></entry>
+      <entry><ind> 100 </ind><dep> 153 </dep></entry>
+      <entry><ind> 150 </ind><dep> 215 </dep></entry>
+      <entry><ind> 200 </ind><dep> 272 </dep></entry>
+      <entry><ind> 250 </ind><dep> 339 </dep></entry>
     </interpolation>
     <axis> 
       <x> -1 </x>
@@ -62,32 +93,31 @@
       <y-m> 0 </y-m>
       <z-m> 0 </z-m>  
     </center>
-  </animation>
-  
-   <!-- TEXT OSG -->
+  </animation>         
+ 
+  <!-- TEXT OSG -->
   <text>
     <name>textosg</name>
     <type type="string">literal</type>
-    <text type="string">Airspeed (km/h)</text>
+    <text type="string">Air Speed in KM/H</text>
     <draw-text type="bool">true</draw-text>
     <font>Helvetica.txf</font>
     <character-size type="double">0.014</character-size>
     <character-aspect-ratio type="double">1.0</character-aspect-ratio>
     <axis-alignment>yz-plane</axis-alignment>
     <max-height>0.06</max-height>
-    <max-width>0.05</max-width>
+    <max-width>0.1</max-width>
     <font-resolution>
       <width type="int">64</width>
       <height type="int">64</height>
     </font-resolution>
     <alignment>center-center</alignment>
     <offsets>
-      <x-m>  0.005 </x-m>
+      <x-m>  0.01 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.000 </z-m>
+      <z-m>  0 </z-m>
     </offsets>
   </text>
-
   <animation>
     <type>material</type>
     <object-name>textosg</object-name>
@@ -97,7 +127,6 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-
   <animation>
     <type>select</type>
     <object-name>textosg</object-name>
@@ -105,5 +134,5 @@
       <property>sim/panel-hotspots</property>
     </condition>
   </animation>
-  
+ 
 </PropertyList>

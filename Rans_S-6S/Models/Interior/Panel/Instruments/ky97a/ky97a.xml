@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # 
+ # August 2013 : Modified by PAF team
+ # http://equipe-flightgear.forumactif.com
+
+##########################################-->
+
+<PropertyList>
+
+  <path>ky97a.ac</path>
+
+  <animation>
+    <object-name>Chanel-Button</object-name>
+    <object-name>Chanel-Digit</object-name>
+    <object-name>Display-Off</object-name>
+    <object-name>Display-On</object-name>
+    <object-name>Face</object-name>
+    <object-name>Freq-Sel</object-name>
+    <object-name>Freq-Sel-10</object-name>
+    <object-name>On-Off-Vol</object-name>
+    <object-name>PG-Digit</object-name>
+    <object-name>Stby-Digit-Dot</object-name>
+    <object-name>Stby-Digit0.01</object-name>
+    <object-name>Stby-Digit0.1</object-name>
+    <object-name>Stby-Digit1</object-name>
+    <object-name>Stby-Digit10</object-name>
+    <object-name>Stby-Digit100</object-name>
+    <object-name>Stby-Use-Switch</object-name>
+    <object-name>TX-Digit</object-name>
+    <object-name>Use-Digit-Dot</object-name>
+    <object-name>Use-Digit0.01</object-name>
+    <object-name>Use-Digit0.1</object-name>
+    <object-name>Use-Digit1</object-name>
+    <object-name>Use-Digit10</object-name>
+    <object-name>Use-Digit100</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <!--<object-name>Display-Off</object-name>-->
+    <object-name>PG-Digit</object-name>
+    <object-name>Chanel-Digit</object-name>
+  </animation>
+
+  <!--<animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Cap10C/Models/Effects/glass_shader.png</texture>
+    <object-name>Display-Off</object-name>
+  </animation>-->
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Display-Off</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Display-Off</object-name>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+  </effect>
+
+
+  <params>
+    <comm-serviceable>instrumentation/comm[0]/serviceable</comm-serviceable>
+    <power-comm>instrumentation/comm[0]/power-btn</power-comm>
+    <comm-frq-swp>instrumentation/comm[0]/frq-swap-btn</comm-frq-swp>
+    <comm-frq-selected>instrumentation/comm[0]/frequencies/selected-mhz</comm-frq-selected>
+    <comm-frq-standby>instrumentation/comm[0]/frequencies/standby-mhz</comm-frq-standby>
+    <comm-volume>instrumentation/comm[0]/volume</comm-volume>
+    <comm-test>instrumentation/comm[0]/test-btn</comm-test>
+  </params>
+
+  <!-- Translate/rotate animation -->
+  <animation>
+    <type>translate</type>
+    <object-name>Stby-Use-Switch</object-name>
+    <property alias="../../params/comm-frq-swp"/>
+    <factor>-0.004</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>radioTx</object-name>
+    <condition>
+      <property>instrumentation/comm[0]/ptt</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>TX-Digit</object-name>
+    <!--<object-name>Display-On</object-name>-->
+    <object-name>Stby-Digit-Dot</object-name>
+    <object-name>Stby-Digit0.01</object-name>
+    <object-name>Stby-Digit0.1</object-name>
+    <object-name>Stby-Digit1</object-name>
+    <object-name>Stby-Digit10</object-name>
+    <object-name>Stby-Digit100</object-name>
+    <object-name>Use-Digit-Dot</object-name>
+    <object-name>Use-Digit0.01</object-name>
+    <object-name>Use-Digit0.1</object-name>
+    <object-name>Use-Digit1</object-name>
+    <object-name>Use-Digit10</object-name>
+    <object-name>Use-Digit100</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>radioFreq</object-name>
+    <object-name>radioTx</object-name>
+    <condition>
+      <greater-than>
+        <property>systems/electrical/outputs/comm[0]</property>
+        <value>8.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <!-- Text-translate animation -->
+  <!--<animation>
+    <type>textranslate</type>
+    <object-name>Use-Digit100</object-name>
+    <property alias="../../params/comm-frq-selected"/>
+    <step>100</step>
+    <factor>0.001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Use-Digit10</object-name>
+    <property alias="../../params/comm-frq-selected"/>
+    <step>10</step>
+    <factor>0.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Use-Digit1</object-name>
+    <property alias="../../params/comm-frq-selected"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Use-Digit0.1</object-name>
+    <property alias="../../params/comm-frq-selected"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Use-Digit0.01</object-name>
+    <property alias="../../params/comm-frq-selected"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Stby-Digit100</object-name>
+    <property alias="../../params/comm-frq-standby"/>
+    <step>100</step>
+    <factor>0.001</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Stby-Digit10</object-name>
+    <property alias="../../params/comm-frq-standby"/>
+    <step>10</step>
+    <factor>0.01</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Stby-Digit1</object-name>
+    <property alias="../../params/comm-frq-standby"/>
+    <step>1</step>
+    <factor>0.1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Stby-Digit0.1</object-name>
+    <property alias="../../params/comm-frq-standby"/>
+    <step>0.1</step>
+    <factor>1</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Stby-Digit0.01</object-name>
+    <property alias="../../params/comm-frq-standby"/>
+    <step>0.01</step>
+    <factor>10</factor>
+    <bias>0.0001</bias>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>-->
+
+  <!-- Knob animation -->
+  <animation>
+    <type>knob</type>
+    <object-name>On-Off-Vol</object-name>
+    <property alias="../../params/comm-volume"/>
+    <factor>-270</factor>
+    <offset-deg>135</offset-deg>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.01994</x-m>
+      <y-m>0.03148</y-m>
+      <z-m>-0.008368</z-m>
+    </center>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/comm-volume"/>
+        <factor>0.1</factor>
+        <min>0.0</min>
+        <max>1.0</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property alias="../../../../params/power-comm"/>
+        <value>1</value>
+        <condition>
+          <greater-than>
+            <property alias="../../../../../../params/comm-volume"/>
+            <value>0.05</value>
+          </greater-than>
+        </condition>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property alias="../../../../params/power-comm"/>
+        <value>0</value>
+        <condition>
+          <less-than>
+            <property alias="../../../../../../params/comm-volume"/>
+            <value>0.05</value>
+          </less-than>
+        </condition>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>Freq-Sel</object-name>
+    <property alias="../../params/comm-frq-standby"/>
+    <factor>-360</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.03035</x-m>
+      <y-m>0.06067</y-m>
+      <z-m>-0.001647</z-m>
+    </center>
+    <action>
+      <binding>
+        <condition>
+          <property alias="../../../../../params/power-comm"/>
+        </condition>
+        <command>property-adjust</command>
+        <property alias="../../../../params/comm-frq-standby"/>
+        <factor>0.025</factor>
+        <min>0.0</min>
+        <max>1.0</max>
+        <resolution>0.025</resolution>
+        <wrap>true</wrap>
+        <mask>decimal</mask>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>Freq-Sel-10</object-name>
+    <property alias="../../params/comm-frq-standby"/>
+    <factor>-7</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>0.02108</x-m>
+      <y-m>0.06067</y-m>
+      <z-m>-0.001647</z-m>
+    </center>
+    <action>
+      <binding>
+        <condition>
+          <property alias="../../../../../params/power-comm"/>
+        </condition>
+        <command>property-adjust</command>
+        <property alias="../../../../params/comm-frq-standby"/>
+        <factor>1</factor>
+        <min>118.0</min>
+        <max>137.0</max>
+        <wrap>true</wrap>
+        <mask>integer</mask>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>Stby-Use-Switch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property alias="../../../../params/comm-frq-swp"/>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-swap</command>
+        <property alias="../../../../params/comm-frq-selected"/>
+        <property alias="../../../../params/comm-frq-standby"/>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property alias="../../../../../params/comm-frq-swp"/>
+          <value type="int">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <text>
+    <name>radioFreq</name>
+    <type type="string">number-value</type>
+    <property type="string">instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <format type="string">%3.2f</format>
+    <!--<format type="string">%s</format>-->
+    <draw-text type="bool">true</draw-text>
+    <font>led.txf</font>
+    <character-size type="double">0.011</character-size>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.09</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.0148 </x-m>
+      <y-m> -0.049 </y-m>
+      <z-m>  0.006 </z-m>
+    </offsets>
+  </text>
+
+  <text>
+    <name>radioFreq</name>
+    <type type="string">number-value</type>
+    <property type="string">instrumentation/comm[0]/frequencies/standby-mhz</property>
+    <format type="string">%3.2f</format>
+    <!--<format type="string">%s</format>-->
+    <draw-text type="bool">true</draw-text>
+    <font>led.txf</font>
+    <character-size type="double">0.011</character-size>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.09</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.0148 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.006 </z-m>
+    </offsets>
+  </text>
+
+
+  <text>
+    <name>radioTx</name>
+    <type type="string">literal</type>
+    <text type="string">TX</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.0065</character-size>
+    <character-aspect-ratio type="double">1</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.02</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <layout>vertical</layout>
+    <offsets>
+      <x-m>  0.0148 </x-m>
+      <y-m> -0.026 </y-m>
+      <z-m>  0.0055 </z-m>
+    </offsets>
+  </text>
+
+  <animation>
+    <type>material</type>
+    <object-name>radioFreq</object-name>
+    <object-name>radioTx</object-name>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+    <ambient>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </ambient>
+    <diffuse>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </diffuse>
+    <specular>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </specular>
+  </animation>
+
+</PropertyList>

@@ -12,19 +12,7 @@
 
 <path>turn-gauge.ac</path>
 
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Rans_S-6S/Models/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
+  <!-- animation>
     <type>material</type>
     <object-name>TURNneedle</object-name>
     <object-name>TURNgauge.001</object-name>
@@ -34,6 +22,67 @@
       <blue>  0.04 </blue>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
+  </animation -->
+
+  <animation>
+    <object-name>TURNneedle</object-name>
+    <object-name>TURNgauge.001</object-name>
+	<object-name>slipball</object-name>
+	<object-name>TURNgauge</object-name>
+  </animation>
+
+	<!-- Backlighting system -->
+  <animation>
+    <name>BackLightAnimation</name>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <object-name>backlightBig</object-name>
+    <position>
+      <x> 0.035 </x>
+      <y> 0.01 </y>
+      <z> -0.05 </z>
+    </position>
+    <direction>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  1.0 </z>
+    </direction>
+    <ambient>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.5 </r>
+      <g>  0.404 </g>
+      <b>  0.2 </b>
+      <a>  1.0 </a>
+    </diffuse>
+    <specular>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </specular>
+    <dim-factor>
+      <property>systems/electrical/outputs/instrument-lights</property>
+      <!-- optional begin -->
+      <factor>0.02</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1</max>
+      <!-- optional end -->
+    </dim-factor>
+    <attenuation>
+      <c>  0.2 </c>
+      <l>  0.2 </l>
+      <q>  0.4 </q>
+    </attenuation>
+    <exponent>  8.0 </exponent>
+    <cutoff>   48.0   </cutoff>
+    <near-m>    0.0   </near-m>
+    <far-m>     0.09 </far-m>
   </animation>
 
   <animation>

@@ -4,13 +4,74 @@
 
     <path>panel.ac</path>
 
+	<!-- Backlighting system -->
+  <animation>
+    <name>BackLightAnimation</name>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <object-name>backlight</object-name>
+    <position>
+      <x> 0.035 </x>
+      <y> 0.01 </y>
+      <z> -0.05 </z>
+    </position>
+    <direction>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  1.0 </z>
+    </direction>
+    <ambient>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.5 </r>
+      <g>  0.404 </g>
+      <b>  0.2 </b>
+      <a>  1.0 </a>
+    </diffuse>
+    <specular>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </specular>
+    <dim-factor>
+      <property>systems/electrical/outputs/instrument-lights</property>
+      <!-- optional begin -->
+      <factor>50</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1</max>
+      <!-- optional end -->
+    </dim-factor>
+    <attenuation>
+      <c>  0.2 </c>
+      <l>  0.2 </l>
+      <q>  0.4 </q>
+    </attenuation>
+    <exponent>  8.0 </exponent>
+    <cutoff>   48.0   </cutoff>
+    <near-m>    0.0   </near-m>
+    <far-m>     0.09 </far-m>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>BackLightAnimation</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
     <!-- Throttle 1 -->
     <model>
         <path>Instruments/Throttle/throttle.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m> -0.39 </y-m>
-            <z-m> -0.04 </z-m>
+            <y-m> -0.432901 </y-m>
+            <z-m> -0.06411 </z-m>
         </offsets>
     </model>
 
@@ -20,7 +81,7 @@
         <offsets>
             <x-m>  0 </x-m>
             <y-m> -0.08 </y-m>
-            <z-m> -0.04 </z-m>
+            <z-m> -0.06411 </z-m>
         </offsets>
     </model>
 
@@ -29,28 +90,48 @@
         <path>Instruments/Throttle/throttle.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0 </y-m>
-            <z-m> -0.04 </z-m>
+            <y-m>  0.08 </y-m>
+            <z-m> -0.06411 </z-m>
+        </offsets>
+    </model>
+
+    <!-- Throttle 4 -->
+    <model>
+        <path>Instruments/Throttle/throttle.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m> 0.432901 </y-m>
+            <z-m> -0.06411 </z-m>
+        </offsets>
+    </model>
+
+    <!-- Key -->
+    <model>
+        <path>Instruments/key/key.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m> -0.432901 </y-m>
+            <z-m> 0.034202 </z-m>
         </offsets>
     </model>
 
     <!-- Air Speed Indicator -->
     <model>
-        <path>Instruments/ASI/ASI.xml</path>
+        <path>Instruments/asi/asi.xml</path>
         <offsets>
-            <x-m>  0.01</x-m>
-            <y-m> -0.34 </y-m>
-            <z-m>  0.10 </z-m>
+            <x-m>  0.005</x-m>
+            <y-m> -0.360139 </y-m>
+            <z-m>  0.071237 </z-m>
         </offsets>
     </model>
-
+	
     <!-- Artificial horizon -->
     <model>
         <path>Instruments/ai/ai.xml</path>
         <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m> -0.25 </y-m>
-            <z-m>  0.10 </z-m>
+            <x-m>  0.005 </x-m>
+            <y-m> -0.260139 </y-m>
+            <z-m>  0.071237 </z-m>
         </offsets>
     </model>
 
@@ -58,9 +139,29 @@
     <model>
         <path>Instruments/alt/alt.xml</path>
         <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m> -0.15 </y-m>
-            <z-m>  0.10 </z-m>
+            <x-m>  -0.005 </x-m>
+            <y-m> -0.160139 </y-m>
+            <z-m>  0.071237 </z-m>
+        </offsets>
+    </model>
+
+    <!-- RPM -->
+    <model>
+        <path>Instruments/rpm/rpm.xml</path>
+        <offsets>
+            <x-m>  0.005 </x-m>
+            <y-m> -0.360139 </y-m>
+            <z-m>  -0.028763 </z-m>
+        </offsets>
+    </model>
+
+    <!-- Turn  -->
+    <model>
+        <path>Instruments/turn/turn.xml</path>
+        <offsets>
+            <x-m>  -0.005 </x-m>
+            <y-m> -0.260139 </y-m>
+            <z-m>  -0.028763 </z-m>
         </offsets>
     </model>
 
@@ -68,107 +169,44 @@
     <model>
         <path>Instruments/vsi/vsi.xml</path>
         <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m> -0.15 </y-m>
-            <z-m>  0.006 </z-m>
+            <x-m>  0.005 </x-m>
+            <y-m> -0.160139 </y-m>
+            <z-m>  -0.028763 </z-m>
         </offsets>
-    </model>
-
-    <!-- RPM -->
-    <model>
-        <path>Instruments/RPM/RPM.xml</path>
-        <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m> -0.41 </y-m>
-            <z-m>  0.04 </z-m>
-        </offsets>
-    </model>
-
-    <!-- G meter  -->
-    <model>
-        <path>Instruments/ForceG/forceG.xml</path>
-        <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m> -0.34 </y-m>
-            <z-m>  0.006 </z-m>
-        </offsets>
-    </model>
-
-    <!-- Turn  -->
-    <model>
-        <path>Instruments/turn/turn.xml</path>
-        <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m> -0.25 </y-m>
-            <z-m>  0.006 </z-m>
-        </offsets>
-    </model>
-
-    <model>
+    </model>	
+	
+	<!-- Magnetic compass -->
+	<model>
         <path>Instruments/MagneticCompass/MagneticCompass.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0 </y-m>
-            <z-m>  0.173 </z-m>
+            <y-m>  -0.104476 </y-m>
+            <z-m>  0.173597 </z-m>
         </offsets>
     </model>
-
+	
+	<!-- Garmin 196 -->
+    <model>
+        <path>Instruments/garmin196/garmin196_support1.xml</path>
+        <offsets>
+            <x-m>  -0.045 </x-m>
+            <y-m>  0 </y-m>
+            <z-m>  0.221749 </z-m>
+        </offsets>
+    </model>
     <!-- 
          #####################################################################
          # Copilot CONSOLE
          #####################################################################
     -->
 
-    <!-- Handheld Radio -->
-	<!--
+    <!-- Radio COM. -->
     <model>
-        <path>Instruments/IC-A6FR/IC-A6FR_hanheld_radio.ac</path>
+        <path>Instruments\ky97a\ky97a.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0.18 </y-m>
-            <z-m>  0.08 </z-m>
-        </offsets>
-    </model>
-	-->
-
-    <model>
-        <path>Instruments\ky196\ky196-comm1.xml</path>
-        <offsets>
-            <x-m>  0.02 </x-m>
-            <y-m>  0.18 </y-m>
+            <y-m>  0 </y-m>
             <z-m>  0.137491 </z-m>
-        </offsets>
-    </model>
-
-    <!-- Turn  -->
-    <!--
-    <model>
-        <path>Instruments/turn/turn.xml</path>
-        <offsets>
-            <x-m>  0.02 </x-m>
-            <y-m>  0.28 </y-m>
-            <z-m>  0.13 </z-m>
-        </offsets>
-    </model>
-    -->
-
-    <!-- Battery gauge -->
-    <model>
-        <path>Instruments/BatteryGauge/BatteryGauge.xml</path>
-        <offsets>
-            <x-m>  0.02 </x-m>
-            <y-m>  0.28 </y-m>
-            <z-m>  0.06 </z-m>
-        </offsets>
-    </model>
-
-    <!-- Clock -->
-    <model>
-        <path>Instruments/clock/clock.xml</path>
-        <offsets>
-            <x-m>  0.01 </x-m>
-            <y-m>  0.37 </y-m>
-            <z-m>  0.06 </z-m>
         </offsets>
     </model>
 
@@ -176,12 +214,52 @@
     <model>
         <path>Instruments/horameter/horameter.xml</path>
         <offsets>
-            <x-m>  0.01 </x-m>
+            <x-m>  0.011 </x-m>
+            <y-m>  0.189911 </y-m>
+            <z-m> 0.13 </z-m>
+        </offsets>
+    </model>
+
+    <!-- Clock -->
+    <model>
+        <path>Instruments/vdo_52mm_clock/vdo_52mm_clock.xml</path>
+        <offsets>
+            <x-m>  0.011 </x-m>
+            <y-m>  0.28 </y-m>
+            <z-m>  0.13 </z-m>
+        </offsets>
+    </model>
+
+	<!-- AMPS gauge -->
+    <model>
+        <path>Instruments/vdo_52mm_amp/vdo_52mm_amp.xml</path>
+        <offsets>
+            <x-m>  0.011 </x-m>
             <y-m>  0.189911 </y-m>
             <z-m> 0.06 </z-m>
         </offsets>
     </model>
 
+    <!-- Volt gauge -->
+    <model>
+        <path>Instruments/vdo_52mm_volt/vdo_52mm_volt.xml</path>
+        <offsets>
+            <x-m>  0.011 </x-m>
+            <y-m>  0.28 </y-m>
+            <z-m>  0.06 </z-m>
+        </offsets>
+    </model>	
+
+    <!-- Battery -->
+    <model>
+        <path>Instruments/vdo_52mm_battery/vdo_52mm_battery.xml</path>
+        <offsets>
+            <x-m>  0.011 </x-m>
+            <y-m>  0.37 </y-m>
+            <z-m>  0.06 </z-m>
+        </offsets>
+    </model>
+	
     <!-- 
          #####################################################################
          # CENTER CONSOLE
@@ -190,41 +268,46 @@
 
     <!-- Oil temp -->
     <model>
-        <path>Instruments/OilGauge/OilGauge.xml</path>
+        <!-- path>Instruments/OilGauge/OilGauge.xml</path -->
+		<path>Instruments/vdo_52mm_oil_temp/vdo_52mm_oil_temp.xml</path>
         <offsets>
-            <x-m>  0.02 </x-m>
-            <y-m> -0.04 </y-m>
+            <x-m>  0.011 </x-m>
+            <y-m> -0.07</y-m>
             <z-m>  0 </z-m>
         </offsets>
     </model>
 
+	<!-- Water Temp ?? -->
     <model>
-        <path>Instruments/EGT-OAT/EGT-OAT.xml</path>
+        <!-- path>Instruments/EGT-OAT/EGT-OAT.xml</path -->
+		 <path>Instruments/vdo_52mm_water_temp/vdo_52mm_water_temp.xml</path>
         <offsets>
             <x-m>  0.01 </x-m>
-            <y-m>  0.10 </y-m>
+            <y-m>  0 </y-m>
             <z-m>  0 </z-m>
         </offsets>
     </model>
 
+ <!-- Fuel Gauge --> 
     <model>
-        <path>Instruments/FuelGauge/FuelGauge.xml</path>
+        <!-- path>Instruments/FuelGauge/FuelGauge.xml</path -->
+		<path>Instruments/vdo_52mm_fuel/vdo_52mm_fuel.xml</path>
         <offsets>
             <x-m>  0.01 </x-m>
-            <y-m>  0.03 </y-m>
+            <y-m>  0.07 </y-m>
             <z-m>  0 </z-m>
         </offsets>
     </model>
 
 	<!-- Magneto switch -->
-    <model>
+    <!-- model>
         <path>Instruments/magneto-switch/mags.xml</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m>  0 </y-m>
             <z-m> -0.09 </z-m>
         </offsets>
-    </model>
+    </model -->
 
 	<!-- Trim wheel -->
     <model>
@@ -232,7 +315,7 @@
         <offsets>
             <x-m> 0 </x-m>
             <y-m>  0.05 </y-m>
-            <z-m> -0.19 </z-m>
+            <z-m> -0.2 </z-m>
         </offsets>
     </model>
 
@@ -268,14 +351,14 @@
         </offsets>
     </model>
 
-    <model> 
+    <!-- model> 
         <path>Aircraft/Instruments-3d/garmin196/garmin196.xml</path>
         <offsets>
             <x-m>  0 </x-m>
             <y-m>  0 </y-m>
             <z-m>  0.12 </z-m>
         </offsets>
-    </model>
+    </model -->
 
     <!-- 
          Switches (from left to right) 
@@ -283,133 +366,135 @@
 
     <!-- Radio -->
     <model> 
-        <path>Instruments/Switch/switch_radio.xml</path>
-        <offsets>
-            <x-m>  0 </x-m>
-            <y-m> -0.03 </y-m>
-            <z-m>  0.04 </z-m>
-        </offsets>
-    </model>
-    <model> 
         <path>Instruments/Switch/switch_radio_label.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m> -0.03 </y-m>
-            <z-m>  0.055 </z-m>
+            <y-m> -0.06 </y-m>
+            <z-m>  0.102943 </z-m>
         </offsets>
     </model>
     <model> 
         <path>Instruments/Switch/switch_light.ac</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m> -0.03 </y-m>
-            <z-m>  0.07 </z-m>
+            <y-m> -0.06 </y-m>
+            <z-m>  0.087943 </z-m>
+        </offsets>
+    </model>	
+    <model> 
+        <path>Instruments/Switch/switch_radio.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m> -0.06 </y-m>
+            <z-m>  0.066753 </z-m>
         </offsets>
     </model>
 
+
     <!-- Avionics -->
-    <model> 
-        <path>Instruments/Switch/switch_avionics.xml</path>
-        <offsets>
-            <x-m>  0 </x-m>
-            <y-m>  0 </y-m>
-            <z-m>  0.04 </z-m>
-        </offsets>
-    </model>
     <model> 
         <path>Instruments/Switch/switch_avionics_label.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0 </y-m>
-            <z-m>  0.055 </z-m>
+            <y-m>  -0.03 </y-m>
+            <z-m>  0.102943 </z-m>
         </offsets>
     </model>
     <model> 
         <path>Instruments/Switch/switch_light.ac</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0 </y-m>
-            <z-m>  0.07 </z-m>
+            <y-m>  -0.03 </y-m>
+            <z-m>  0.087943 </z-m>
+        </offsets>
+    </model>
+    <model> 
+        <path>Instruments/Switch/switch_avionics.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m>  -0.03 </y-m>
+            <z-m>  0.066753 </z-m>
         </offsets>
     </model>
 
     <!-- Landing Lights -->
     <model> 
-        <path>Instruments/Switch/switch_landing_lights.xml</path>
-        <offsets>
-            <x-m>  0 </x-m>
-            <y-m>  0.03 </y-m>
-            <z-m>  0.04 </z-m>
-        </offsets>
-    </model>
-    <model> 
         <path>Instruments/Switch/switch_landing_lights_label.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0.03 </y-m>
-            <z-m>  0.055 </z-m>
+            <y-m>  0 </y-m>
+            <z-m>  0.102943 </z-m>
         </offsets>
     </model>
     <model> 
         <path>Instruments/Switch/switch_light.ac</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0.03 </y-m>
-            <z-m>  0.07 </z-m>
+            <y-m>  0 </y-m>
+            <z-m>  0.087943 </z-m>
+        </offsets>
+    </model>	
+    <model> 
+        <path>Instruments/Switch/switch_landing_lights.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m>  0 </y-m>
+            <z-m>  0.066753 </z-m>
         </offsets>
     </model>
 
     <!-- Nav lights -->
     <model> 
-        <path>Instruments/Switch/switch_navigation_lights.xml</path>
-        <offsets>
-            <x-m>  0 </x-m>
-            <y-m>  0.06 </y-m>
-            <z-m>  0.04 </z-m>
-        </offsets>
-    </model>
-    <model> 
         <path>Instruments/Switch/switch_navigation_lights_label.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0.06 </y-m>
-            <z-m>  0.055 </z-m>
+            <y-m>  0.03 </y-m>
+            <z-m>  0.102943 </z-m>
         </offsets>
     </model>
     <model> 
         <path>Instruments/Switch/switch_light.ac</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0.06 </y-m>
-            <z-m>  0.07 </z-m>
+            <y-m>  0.03 </y-m>
+            <z-m>  0.087943 </z-m>
+        </offsets>
+    </model>
+    <model> 
+        <path>Instruments/Switch/switch_navigation_lights.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m>  0.03 </y-m>
+            <z-m>  0.066753 </z-m>
         </offsets>
     </model>
 
     <!-- Cockpit lights -->
     <model> 
-        <path>Instruments/Switch/switch_cockpit_lights.xml</path>
-        <offsets>
-            <x-m>  0 </x-m>
-            <y-m>  0.09 </y-m>
-            <z-m>  0.04 </z-m>
-        </offsets>
-    </model>
-    <model> 
         <path>Instruments/Switch/switch_cockpit_lights_label.xml</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0.09 </y-m>
-            <z-m>  0.055 </z-m>
+            <y-m>  0.06 </y-m>
+            <z-m>  0.102943 </z-m>
         </offsets>
     </model>
     <model> 
         <path>Instruments/Switch/switch_light.ac</path>
         <offsets>
             <x-m>  0 </x-m>
-            <y-m>  0.09 </y-m>
-            <z-m>  0.07 </z-m>
+            <y-m>  0.06 </y-m>
+            <z-m>  0.087943 </z-m>
         </offsets>
     </model>
+    <model> 
+        <path>Instruments/Switch/switch_cockpit_lights.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m>  0.06 </y-m>
+            <z-m>  0.066753 </z-m>
+        </offsets>
+    </model>
+
 
     <!-- Battery switch -->
     <model> 
@@ -466,4 +551,58 @@
         </offsets>
 	</model>
 	-->
+
+    <!-- Magneto L -->
+    <model> 
+        <path>Instruments/Switch/switch_mag_l_label.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m> -0.012371 </y-m>
+            <z-m>  -0.053333 </z-m>
+        </offsets>
+    </model>
+    <model> 
+        <path>Instruments/Switch/switch_light.ac</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m> -0.012371 </y-m>
+            <z-m>  -0.068333 </z-m>
+        </offsets>
+    </model>	
+    <model> 
+        <path>Instruments/Switch/switch_mag_l.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m> -0.012371 </y-m>
+            <z-m>  -0.089523 </z-m>
+        </offsets>
+    </model>
+
+
+    <!-- Magneto R -->
+    <model> 
+        <path>Instruments/Switch/switch_mag_r_label.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m>  0.012371 </y-m>
+            <z-m>  -0.053333 </z-m>
+        </offsets>
+    </model>
+    <model> 
+        <path>Instruments/Switch/switch_light.ac</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m>  0.012371 </y-m>
+            <z-m>  -0.068333 </z-m>
+        </offsets>
+    </model>
+    <model> 
+        <path>Instruments/Switch/switch_mag_r.xml</path>
+        <offsets>
+            <x-m>  0 </x-m>
+            <y-m>  0.012371 </y-m>
+            <z-m>  -0.089523 </z-m>
+        </offsets>
+    </model>
+	
 </PropertyList>

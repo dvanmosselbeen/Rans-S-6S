@@ -84,6 +84,22 @@ global_system = func{
     settimer(global_system, 0);
 }
 
+##############################################
+############### CONVERT UNIT #################
+##############################################
+
+setlistener("/instrumentation/airspeed-indicator/indicated-speed-kt", func(asi) {
+    var speed = asi.getValue();
+    speed = speed * 1.852;
+    setprop("/instrumentation/airspeed-indicator/indicated-speed-kmh", speed);
+});
+
+setlistener("/engines/engine/oil-temperature-degf", func(degf) {
+    var degf = degf.getValue();
+    var degc = (degf - 32) * (5 / 9);
+    setprop("/engines/engine/oil-temperature-degc", degc);
+});
+
 ##########################################
 # SetListerner must be at the end of this file
 ##########################################

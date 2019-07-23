@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>vdo_52mm_volt.ac</path>
+
+ <animation>
+  <object-name>Face</object-name>
+  <object-name>Needle</object-name>
+ </animation>
+
+	<!-- Backlighting system -->
+  <animation>
+    <name>BackLightAnimation</name>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <object-name>backlight</object-name>
+    <position>
+      <x> 0.035 </x>
+      <y> 0.01 </y>
+      <z> -0.05 </z>
+    </position>
+    <direction>
+      <x> -1.0 </x>
+      <y>  0.0 </y>
+      <z>  1.0 </z>
+    </direction>
+    <ambient>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.5 </r>
+      <g>  0.404 </g>
+      <b>  0.2 </b>
+      <a>  1.0 </a>
+    </diffuse>
+    <specular>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </specular>
+    <dim-factor>
+      <property>systems/electrical/outputs/instrument-lights</property>
+      <!-- optional begin -->
+      <factor>0.02</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1</max>
+      <!-- optional end -->
+    </dim-factor>
+    <attenuation>
+      <c>  0.2 </c>
+      <l>  0.2 </l>
+      <q>  0.4 </q>
+    </attenuation>
+    <exponent>  8.0 </exponent>
+    <cutoff>   48.0   </cutoff>
+    <near-m>    0.0   </near-m>
+    <far-m>     0.09 </far-m>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>BackLightAnimation</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+
+	<!-- Gauge animation -->
+  <animation> 
+  <name>AnimationRotation</name>
+    <type>rotate</type>
+    <object-name>Needle</object-name>
+    <property>/systems/electrical/volts</property>
+    <interpolation>
+     <entry><ind>  0 </ind><dep>  0 </dep></entry>
+     <entry><ind> 20 </ind><dep> 45 </dep></entry>
+     <entry><ind> 40 </ind><dep> 90 </dep></entry>
+    </interpolation>
+    <axis> 
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.00 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>  -0.01145 </z-m>  
+    </center>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AnimationRotation</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+  </animation>
+
+
+
+   <!-- TEXT OSG -->
+  <text>
+    <name>textosg</name>
+    <type type="string">literal</type>
+    <text type="string">Volt</text>
+    <draw-text type="bool">true</draw-text>
+    <font>Helvetica.txf</font>
+    <character-size type="double">0.014</character-size>
+    <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+    <axis-alignment>yz-plane</axis-alignment>
+    <max-height>0.06</max-height>
+    <max-width>0.1</max-width>
+    <font-resolution>
+      <width type="int">64</width>
+      <height type="int">64</height>
+    </font-resolution>
+    <alignment>center-center</alignment>
+    <offsets>
+      <x-m>  0.01 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  0 </z-m>
+    </offsets>
+  </text>
+
+  <animation>
+    <type>material</type>
+    <object-name>textosg</object-name>
+    <emission>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>textosg</object-name>
+    <condition>
+      <property>sim/panel-hotspots</property>
+    </condition>
+  </animation>
+
+</PropertyList>
+
+

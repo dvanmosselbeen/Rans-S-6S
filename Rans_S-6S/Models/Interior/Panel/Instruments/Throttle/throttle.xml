@@ -68,10 +68,9 @@
     <offsets>
       <x-m>  0.01 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.01 </z-m>
+      <z-m>  0.025 </z-m>
     </offsets>
   </text>
-
   <animation>
     <type>material</type>
     <object-name>textosg</object-name>
@@ -81,7 +80,6 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-
   <animation>
     <type>select</type>
     <object-name>textosg</object-name>
