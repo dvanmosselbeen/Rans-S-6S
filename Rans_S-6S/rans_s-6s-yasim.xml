@@ -35,17 +35,17 @@
 
 -->
 
-<airplane mass="600">
+<airplane mass="736" version="YASIM_VERSION_32">
 
     <!-- Approach configuration -->
-    <approach speed="33" aoa="8.05" fuel="0.2">
+    <approach speed-kmh="62" aoa="8.05" fuel="0.2">
         <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
         <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
         <control-setting axis="/controls/flight/flaps" value="1"/>
     </approach>
 
     <!-- Cruise configuration -->
-    <cruise speed="80" alt="6000" fuel="0.2">
+    <cruise speed-kmh="150" alt="6000" fuel="0.2">
         <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
         <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
         <control-setting axis="/controls/flight/flaps" value="0"/>
@@ -129,7 +129,7 @@
         gear-ratio="0.440">
 
         <piston-engine
-            eng-rpm="5500" 
+            eng-rpm="5800" 
             eng-power="100" 
             displacement="82.6" 
             compression="10.5"/>
