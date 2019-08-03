@@ -9,9 +9,9 @@
         <name>nav-light-right</name>
         <path>Effects/lights/procedural_light_nav_right.xml</path>
         <offsets>
-            <x-m>1.41795</x-m>
-            <y-m>-9.40405</y-m>
-            <z-m>0.241904</z-m>
+            <x-m>-1.37223</x-m>
+            <y-m>-4.80865</y-m>
+            <z-m>0.571713</z-m>
         </offsets>
     </model>
 
@@ -20,9 +20,9 @@
         <name>nav-light-left</name>
         <path>Effects/lights/procedural_light_nav_left.xml</path>
         <offsets>
-            <x-m>1.41795</x-m>
-            <y-m>9.40405</y-m>
-            <z-m>0.241904</z-m>
+            <x-m>-1.37223</x-m>
+            <y-m>4.80865</y-m>
+            <z-m>0.571713</z-m>
         </offsets>
     </model>
 
@@ -39,21 +39,21 @@
 
     <model>
         <name>strobe-light-left</name>
-        <path>Aircraft/c172p/Models/Effects/lights/procedural_light_left_strobe.xml</path>
+        <path>Effects/lights/procedural_light_left_strobe.xml</path>
         <offsets>
-            <x-m>1.41795</x-m>
-            <y-m>9.40405</y-m>
-            <z-m>0.241904</z-m>
+            <x-m>-1.37223</x-m>
+            <y-m>4.80865</y-m>
+            <z-m>0.571713</z-m>
         </offsets>
      </model>
 
     <model>
         <name>strobe-light-right</name>
-        <path>Aircraft/c172p/Models/Effects/lights/procedural_light_right_strobe.xml</path>
+        <path>Effects/lights/procedural_light_right_strobe.xml</path>
         <offsets>
-            <x-m>1.41795</x-m>
-            <y-m>-9.40405</y-m>
-            <z-m>0.241904</z-m>
+            <x-m>-1.37223</x-m>
+            <y-m>-4.80865</y-m>
+            <z-m>0.571713</z-m>
         </offsets>
      </model>
     <nasal>
