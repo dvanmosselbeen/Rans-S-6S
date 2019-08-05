@@ -62,7 +62,7 @@
             <from-model type="bool">true</from-model>
             <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
             <x-offset-m archive="y">  0 </x-offset-m>       <!-- Blender y axis -->
-            <y-offset-m archive="y">  0.14 </y-offset-m>    <!-- Blender z axis -->
+            <y-offset-m archive="y">  0.225 </y-offset-m>    <!-- Blender z axis -->
             <z-offset-m archive="y"> -1.5 </z-offset-m>     <!-- Blender x axis -->
             <pitch-offset-deg> 0 </pitch-offset-deg>
             <default-field-of-view-deg>65</default-field-of-view-deg>
