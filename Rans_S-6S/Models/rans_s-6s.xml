@@ -68,8 +68,8 @@
     <params>
         <lighting>
             <navigation>sim/multiplay/generic/int[14]</navigation>
-            <beacon>sim/model/c172p/lighting/beacon/state</beacon>
-            <strobes>sim/model/c172p/lighting/strobes/state</strobes>
+            <beacon>sim/model/rans_s-6s/lighting/beacon/state</beacon>
+            <strobes>sim/model/rans_s-6s/lighting/strobes/state</strobes>
             <taxi>
                 <property>sim/multiplay/generic/int[4]</property>
             </taxi>
