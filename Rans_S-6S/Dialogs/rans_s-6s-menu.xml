@@ -20,7 +20,7 @@
             <label>Immatriculation</label>
             <binding>
             <command>nasal</command>
-            <script>skyranger.immat_dialog.toggle()</script>
+            <script>rans_s_6s.immat_dialog.toggle()</script>
             </binding>
             </item>
             -->
