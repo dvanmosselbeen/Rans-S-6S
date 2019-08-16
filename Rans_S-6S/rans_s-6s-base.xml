@@ -4,7 +4,7 @@
     
     <sim include="Nasal/views.xml">
 
-        <fuel-fraction>1.0</fuel-fraction>
+        <fuel-fraction>0.75</fuel-fraction>
 
         <startup>
             <splash-texture>Aircraft/Rans_S-6S/rans_splash.png</splash-texture>
@@ -133,6 +133,16 @@
 			<line>Vno..... 170 km/h, 92 kts, 106 mph (Maximum Structural Cruising Speed - Do not exceed this speed except in smoot air and then only with caution</line>
 			<line>______________________________________________</line>
         </help>
+
+    <rans_s-6s>
+      <state type="int">0</state>
+      <airspeed-kmh type="float">0</airspeed-kmh>
+      <engine-rpm type="float">0</engine-rpm>
+      <engine-volume-low-rpm type="float">0</engine-volume-low-rpm>
+      <engine-volume-high-rpm type="float">0</engine-volume-high-rpm>
+      <rmi-view type="bool">false</rmi-view>
+	  <stall-warning type="float">30</stall-warning>
+    </rans_s-6s>
 
         <!-- Seems not that nice
         <flaps>
