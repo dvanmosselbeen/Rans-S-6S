@@ -29,3 +29,6 @@ This aircraft has 2 different FDM simulations, the Yasim and the JSBSim. We stro
 
 ![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview7.jpg "Rans S-6S Exterior")
 
+## Docs
+
+You will find more documentation in the [Docs](Rans_S-6S/Docs/) directory of the source tree.
