@@ -187,7 +187,7 @@
 	
 	<!-- Garmin 196 -->
     <model>
-        <path>Instruments/garmin196/garmin196_support1.xml</path>
+		<path>Aircraft/Instruments-3d/garmin196/garmin196_support1.xml</path>
         <offsets>
             <x-m>  -0.045 </x-m>
             <y-m>  0 </y-m>
