@@ -21,13 +21,15 @@ This aircraft has 2 different FDM simulations, the Yasim and the JSBSim. We stro
  
  ## Screenshots
 
-![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview0.jpg "Rans S-6S Cockpit")
+![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview0.jpg "Rans S-6S Exterior at EBBZ")
 
-![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview1.jpg "Rans S-6S Exterior at EBBZ")
+![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview1.jpg "Rans S-6S Cockpit")
 
-![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview6.jpg "Rans S-6S Exterior at EBBZ")
+![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview2.jpg "Rans S-6S Cockpit")
 
-![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview7.jpg "Rans S-6S Exterior")
+![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview3.jpg "Rans S-6S Exterior at EBCF")
+
+![alt text](https://github.com/dvanmosselbeen/Rans-S-6S/blob/master/Rans_S-6S/Previews/Rans_S-6S-preview4.jpg "Rans S-6S Exterior at EBCF")
 
 ## Docs
 
